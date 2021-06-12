@@ -11,39 +11,95 @@ id[9] = 0
 0 1 2 3 4 5 6 7 8 9
 0 1 2 3 4 5 6 7 8 0
 
+Array access:
+ union()
+    find(9)      -> 1 access
+    find(0)      -> 1 access
+    for loop     -> 10 + 1 accesses
+
+Array accesses = 13
+--------------------
 input: 3-4
 id[3] = 4
 0 1 2 3 4 5 6 7 8 9
 0 1 2 4 4 5 6 7 8 0
 
+Array access:
+ union()
+    find(3)      -> 1 access
+    find(4)      -> 1 access
+    for loop     -> 10 + 1 accesses
+
+Array accesses = 13
+--------------------
 input: 5-8
 id[5] = 8
 0 1 2 3 4 5 6 7 8 9
 0 1 2 4 4 8 6 7 8 0
 
+Array access:
+ union()
+    find(5)      -> 1 access
+    find(8)      -> 1 access
+    for loop     -> 10 + 1 accesses
+
+Array accesses = 13
+--------------------
 input: 7-2
 id[7] = 2
 0 1 2 3 4 5 6 7 8 9
 0 1 2 4 4 8 6 2 8 0
 
+Array access:
+ union()
+    find(7)      -> 1 access
+    find(2)      -> 1 access
+    for loop     -> 10 + 1 accesses
+
+Array accesses = 13
+--------------------
 input: 2-1
 id[2] = 1
 id[7] = 1
 0 1 2 3 4 5 6 7 8 9
 0 1 1 4 4 8 6 1 8 0
 
+Array access:
+ union()
+    find(2)      -> 1 access
+    find(1)      -> 1 access
+    for loop     -> 10 + 2 accesses
+
+Array accesses = 14
+--------------------
 input: 5-7
 id[5] = 1
 id[8] = 1
 0 1 2 3 4 5 6 7 8 9
 0 1 1 4 4 1 6 1 1 0
 
+Array access:
+ union()
+    find(5)      -> 1 access
+    find(7)      -> 1 access
+    for loop     -> 10 + 2 accesses
+
+Array accesses = 14
+--------------------
 input: 0-3
 id[0] = 4
 id[9] = 4
 0 1 2 3 4 5 6 7 8 9
 4 1 1 4 4 1 6 1 1 4
 
+Array access:
+ union()
+    find(0)      -> 1 access
+    find(3)      -> 1 access
+    for loop     -> 10 + 2 accesses
+
+Array accesses = 14
+--------------------
 input: 4-2
 id[0] = 1
 id[3] = 1
@@ -51,3 +107,15 @@ id[4] = 1
 id[9] = 1
 0 1 2 3 4 5 6 7 8 9
 1 1 1 1 1 1 6 1 1 1
+
+Array access:
+ union()
+    find(4)      -> 1 access
+    find(2)      -> 1 access
+    for loop     -> 10 + 4 accesses
+
+Array accesses = 16
+--------------------
+
+Total array accesses = 4*13 + 3*14 + 16 = 110
+Average array accesses per union = 66 / 8 = 13,75
