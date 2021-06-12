@@ -1,0 +1,24 @@
+Weighted quick-union worst-case estimation
+
+Given
+
+Sites = 10^9
+Input pairs = 10^6
+Computer speed = 10^9 instructions / s = 10^9 i/s
+
+Estimate time = ?
+
+worst-case find()
+= 2*(log(sites)-1)i + 1i
+= 2*log(10^9)i - 1i
+= 2*30i - 1i = 59i
+
+time
+= union time * input pairs / computer speed
+= (2 * find() + if + if + decrement) * 10^6 / 10^9 i/s
+~ (2 * 59i + 1i + 9i + 1i)* 10^6 / 10^9 i/s
+~ (2*59i + 11i) * 10^6 / 10^9 i/s
+= 129i * 10^6 / 10^9 i/s
+= 0.129 s
+= (0.129 / 60 / 60 / 24) days
+~ 1.49 * 10^-6 days
