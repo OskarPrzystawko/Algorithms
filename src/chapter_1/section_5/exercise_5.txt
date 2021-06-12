@@ -1,0 +1,20 @@
+Union-find worst-case estimation
+
+Given
+
+Sites = 10^9
+Input pairs = 10^6
+Computer speed = 10^9 instructions / s = 10^9 i/s
+One iteration of inner for loop = 10 instructions
+
+Estimate time = ?
+
+time
+= union time * input pairs / computer speed
+= (2 * find() + if + for loop + decrement) * 10^6 / 10^9 i/s
+~ (2i + 1i + 10^9 * 10i + 1i) * 10^6 / 10^9 i/s
+~ 10^10i * 10^6 / 10^9 i/s
+= 10^16i / 10^9 i/s
+= 10^7 s
+= (10^7 / 60 / 60 / 24) days
+~ 115.74 days
