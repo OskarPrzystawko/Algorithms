@@ -1,0 +1,30 @@
+2.1.2
+Algorithm: Selection sort
+
+A. What is the maximum number of exchanges involving any particular item during selection sort?
+Selection sort uses maximum n - 1 exchanges because on last item we do not need to invoke exchange
+So particular item can be exchanged maximum n - 1 times.
+
+Example can be any list with at least 2 items where:
+ - 1st item is biggest
+ - rest of the array is sorted
+
+Example:
+G A B C D E F
+A G B C D E F
+A B G C D E F
+A B C G D E F
+A B C D G E F
+A B C D E G F
+A B C D E F G
+
+
+B. What is the average number of exchanges involving an item?
+Assume we have:
+ - N items
+ - N-1 exchanges (every exchange swaps 2 items) = 2*(N-1)
+
+So average number of exchanges an item is:
+  2*(N-1) / N
+  Approx. 2 exchanges (in fact a bit less than 2 for big finite lists)
+
