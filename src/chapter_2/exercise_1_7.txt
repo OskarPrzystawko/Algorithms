@@ -1,0 +1,13 @@
+2.1.7 Which method runs faster for an array in reverse order, selection sort or insertion sort?
+
+I assume that array has length N
+
+Selection sort
+Compares: N^2 / 2
+Exchanges: N
+
+Insertion sort
+Compares: N^2 / 2
+Exchanges: N^2 / 2
+
+In this case Selection Sort will be faster

@@ -1,0 +1,13 @@
+2.1.6 Which method runs faster for an array with all keys identical, selection sort or insertion sort?
+
+I assume that array has length N
+
+Selection sort
+Compares: N^2 / 2
+Exchanges: N
+
+Insertion sort
+Compares: N-1
+Exchanges: 0
+
+In this case Insertion Sort will be faster
