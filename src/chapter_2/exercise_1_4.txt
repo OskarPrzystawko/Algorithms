@@ -1,0 +1,20 @@
+2.1.4 Show in the style of the example trace with Algorithm 2.2
+how Insertion Sort sorts the array E A S Y Q U E S T I O N
+
+Algorithm: Insertion sort
+
+i   j   0 1 2 3 4 5 6 7 8 9 10 11
+---------------------------------
+1   1   a E S Y Q U E S T I O  N
+2   2   A E s Y Q U E S T I O  N
+3   3   A E S y Q U E S T I O  N
+4   2   A E q S Y U E S T I O  N
+5   4   A E Q S u Y E S T I O  N
+6   2   A E e Q S U Y S T I O  N
+7   5   A E E Q S s U Y T I O  N
+8   6   A E E Q S S t U Y I O  N
+9   3   A E E i Q S S T U Y O  N
+10  4   A E E I o Q S S T U Y  N
+11  4   A E E I n O Q S S T U  Y
+---------------------------------
+DONE    A E E I N O Q S S T U  Y

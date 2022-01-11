@@ -1,0 +1,11 @@
+2.1.5 For each of the two conditions in the inner for loop in insertion sort (ALGORITHM 2.2),
+describe an array of N items where that condition is always false when the loop terminates.
+
+
+1. condition - j > 0
+Any decreasing array
+Example: F E D C B A
+
+2. condition - less(a[j], a[j-1])
+Any increasing or constant array
+Example: A B C D E F or A A A A A A
