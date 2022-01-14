@@ -1,0 +1,57 @@
+2.1.9 Show in the style of the example trace with Algorithm 2.3
+how Shell Sort sorts the array E A S Y S H E E L S O R T Q U E S T I O N
+
+Algorithm: Shell sort
+
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
+-----------------------------------------------------
+E A S Y S H E L L S O  R  T  Q  U  E  S  T  I  O  N    INPUT
+E A S Y S H E L L S O  R  T  q  U  E  S  T  I  O  N    13 - sort start
+E A S Y S H E L L S O  R  T  Q  u  E  S  T  I  O  N
+E A e Y S H E L L S O  R  T  Q  U  s  S  T  I  O  N
+E A E s S H E L L S O  R  T  Q  U  S  y  T  I  O  N
+E A E S S H E L L S O  R  T  Q  U  S  Y  t  I  O  N
+E A E S S H E L L S O  R  T  Q  U  S  Y  T  i  O  N
+E A E S S H E L L S O  R  T  Q  U  S  Y  T  I  o  N
+E A E S S H E L L S O  R  T  Q  U  S  Y  T  I  O  n    13 - sorted
+
+E A E S s H E L L S O  R  T  Q  U  S  Y  T  I  O  N
+E A E S S h E L L S O  R  T  Q  U  S  Y  T  I  O  N
+E A E S S H e L L S O  R  T  Q  U  S  Y  T  I  O  N
+E A E l S H E s L S O  R  T  Q  U  S  Y  T  I  O  N
+E A E L l H E S s S O  R  T  Q  U  S  Y  T  I  O  N
+E A E L L H E S S s O  R  T  Q  U  S  Y  T  I  O  N
+E A E L L H E S S S o  R  T  Q  U  S  Y  T  I  O  N
+E A E L L H E r S S O  s  T  Q  U  S  Y  T  I  O  N
+E A E L L H E R S S O  S  t  Q  U  S  Y  T  I  O  N
+E A E L L H E R S q O  S  T  s  U  S  Y  T  I  O  N
+E A E L L H E R S Q O  S  T  S  u  S  Y  T  I  O  N
+E A E L L H E R S Q O  S  T  S  U  s  Y  T  I  O  N
+E A E L L H E R S Q O  S  T  S  U  S  y  T  I  O  N
+E A E L L H E R S Q O  S  T  S  U  S  Y  t  I  O  N
+E A E L L H E R S Q i  S  T  S  o  S  Y  T  u  O  N
+E A E L L H E o S Q I  r  T  S  O  s  Y  T  U  s  N
+E A E L L H E O n Q I  R  s  S  O  S  t  T  U  S  y    4 - sorted
+
+a e E L L H E O N Q I  R  S  S  O  S  T  T  U  S  Y    1 - sort start
+A E e L L H E O N Q I  R  S  S  O  S  T  T  U  S  Y
+A E E l L H E O N Q I  R  S  S  O  S  T  T  U  S  Y
+A E E L l H E O N Q I  R  S  S  O  S  T  T  U  S  Y
+A E E h l l E O N Q I  R  S  S  O  S  T  T  U  S  Y
+A E E e h l l O N Q I  R  S  S  O  S  T  T  U  S  Y
+A E E E H L L o N Q I  R  S  S  O  S  T  T  U  S  Y
+A E E E H L L n o Q I  R  S  S  O  S  T  T  U  S  Y
+A E E E H L L N O q I  R  S  S  O  S  T  T  U  S  Y
+A E E E H i l l n o q  R  S  S  O  S  T  T  U  S  Y
+A E E E H I L L N O Q  r  S  S  O  S  T  T  U  S  Y
+A E E E H I L L N O Q  R  s  S  O  S  T  T  U  S  Y
+A E E E H I L L N O Q  R  S  s  O  S  T  T  U  S  Y
+A E E E H I L L N O o  q  r  s  s  S  T  T  U  S  Y
+A E E E H I L L N O O  Q  R  S  S  s  T  T  U  S  Y
+A E E E H I L L N O O  Q  R  S  S  S  t  T  U  S  Y
+A E E E H I L L N O O  Q  R  S  S  S  T  t  U  S  Y
+A E E E H I L L N O O  Q  R  S  S  S  T  T  u  S  Y
+A E E E H I L L N O O  Q  R  S  S  S  s  t  t  u  Y
+A E E E H I L L N O O  Q  R  S  S  S  S  T  T  U  y    1 - sorted
+---------------------------------
+A E E E H I L L N O O  Q  R  S  S  S  S  T  T  U  Y    DONE
