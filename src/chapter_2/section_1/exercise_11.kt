@@ -8,7 +8,7 @@ object PrecalculatedSequenceShellSort: SortBase() {
     )
     private val MAX_INPUT_SIZE = 3 * H_SEQUENCE[H_SEQUENCE.size - 1] + 1
 
-    fun sort(items: Array<Comparable<Any>>) {
+    fun <T : Comparable<T>> sort(items: Array<T>) {
         val size = items.size
         if (size <= 1) return
         require(size <= MAX_INPUT_SIZE) { "Too big input array. Max array size is: $MAX_INPUT_SIZE" }
