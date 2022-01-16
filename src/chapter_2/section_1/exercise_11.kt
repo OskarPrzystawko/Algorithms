@@ -1,6 +1,6 @@
 package chapter_2.section_1
 
-object PrecalculatedSequenceShellSort {
+object PrecalculatedSequenceShellSort: SortBase() {
 
     private val H_SEQUENCE = intArrayOf(
             1, 4, 13, 40, 121, 364, 1093, 3280, 9841, 29524, 88573, 265720, 797161, 2391484,
@@ -29,11 +29,4 @@ object PrecalculatedSequenceShellSort {
         it < arraySize - 1
     } ?: 0
 
-    private fun less(a: Comparable<Any>, b: Comparable<Any>) = a < b
-
-    private fun exchange(array: Array<Comparable<Any>>, aIndex: Int, bIndex: Int) {
-        val temp = array[aIndex]
-        array[aIndex] = array[bIndex]
-        array[bIndex] = temp
-    }
 }
