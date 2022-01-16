@@ -1,0 +1,4 @@
+2.1.10 Why not use selection sort for h-sorting in shellsort?
+
+Because selection sort time and space complexity is independent of initial order of an array
+so there is no benefit in speed or space complexity in partially sorting an array before 1-sorting it.
