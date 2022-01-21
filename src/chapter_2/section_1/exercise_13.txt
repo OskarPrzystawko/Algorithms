@@ -1,0 +1,27 @@
+2.1.13 Deck Sort
+Explain how you would put a deck of cards in order by suit (in order spades, heart, clubs, diamonds)
+and by rank within each suit, with the restriction that the cards must be laid out face down in a row
+and the only allowed operations are to check the values of two cards and to exchange two cards (keeping them face down).
+
+Assuming that we can use learnt algorithms: Selection sort, Insertion sort, Shell sort
+
+I would use Shell sort as it is the most efficient of them
+and the only one that has worst case of compares a lot better than N^2
+(Version of shell sort from the book has worst case of compares proportional to N^(3/2))
+
+
+--------------------------------
+Additional:
+Can we make an algorithm for this specific task that is a lot more efficient that currently learnt ones?
+
+First I will make few assumptions:
+- We can calculate things (so we can perform more operations than just compare and exchange)
+- A deck is a standard deck
+    - Every deck contains same cards set.
+    - We know what cards a deck contains.
+    - Every card within a deck is unique.
+
+With those assumptions we can calculate a final position of any card.
+Deck is small dataset, so we can even make a map to reduce position calculation operations to just 1 read.
+
+The performance of that algorithm would be linear.
