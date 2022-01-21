@@ -1,0 +1,24 @@
+2.1.8 Suppose that we use insertion sort on a randomly ordered array where items have only one of three values.
+Is the running time linear, quadratic or something in between?
+
+Insertion sort goes through every element in the array and puts that element into proper place,
+always leaving sorted array behind current element.
+
+We will assume that elements' amount of each of 3 values will be equal.
+In other words: There will be the same number of 1s 2s and 3s
+(in fact it can be the case only when array length will be multiple of 3)
+
+Let's say that we are sorting very long array, now we will sort item M on position P, so every item behind item M is already sorted
+To put item M on its place:
+    - If item M will be 1, we will need to make 2/3 P compares and 2/3 P exchanges
+    - If item M will be 2, we will need to make 1/3 P compares and 1/3 P exchanges
+    - If item M will be 3, we will need to make 1 compare and 0 exchanges
+So on average per item it will give us 1/3 P compares and same amount of exchanges.
+
+Let's say that N is array length.
+As algorithm progress, P will grow from 1 to N so on average it will be N / 2
+It gives us on average for each item 1/3 * N/2 compares and same amount of exchanges.
+We have N items in array so entire sort will perform N * (1/3 * N/2) compares and same amount of exchanges.
+
+On average this algorithm will perform N^2 / 6 compares and N^2 / 6 exchanges.
+So final answer is that the running time of this algorithm is still quadratic.
