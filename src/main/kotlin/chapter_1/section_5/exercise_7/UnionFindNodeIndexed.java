@@ -1,8 +1,8 @@
-package main.chapter_1.section_5.exercise_7;
+package chapter_1.section_5.exercise_7;
 
 abstract public class UnionFindNodeIndexed implements UnionFind {
 
-    protected int[] nodeToIdMap;
+    protected final int[] nodeToIdMap;
     protected int componentsAmount;
 
     public UnionFindNodeIndexed(int nodesAmount) {

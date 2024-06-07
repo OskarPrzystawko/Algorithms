@@ -1,4 +1,4 @@
-package main.chapter_2.section_1
+package chapter_2.section_1
 
 import kotlin.math.pow
 import kotlin.random.Random

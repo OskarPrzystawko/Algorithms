@@ -1,4 +1,4 @@
-package main.chapter_1.section_5.exercise_7;
+package chapter_1.section_5.exercise_7;
 
 public interface UnionFind {
 

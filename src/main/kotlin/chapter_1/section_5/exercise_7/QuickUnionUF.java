@@ -1,11 +1,11 @@
-package main.chapter_1.section_5.exercise_7;
+package chapter_1.section_5.exercise_7;
 
 /**
  * N - nodes amount
- *
+ * <p>
  * Worst case time complexity
  *  Union() / Find() - N
- *
+ * <p>
  * Best case time complexity
  *  Union() / Find() - 1
  */

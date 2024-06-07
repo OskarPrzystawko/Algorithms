@@ -1,8 +1,8 @@
-package main.chapter_1.section_5.exercise_7;
+package chapter_1.section_5.exercise_7;
 
 /**
  * N - nodes amount
- *
+ * <p>
  * Time complexity (every case)
  *  Union() - N
  *  Find() - 1
