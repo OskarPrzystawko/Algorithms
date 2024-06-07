@@ -1,4 +1,4 @@
-package chapter_1.section_5.exercise_7;
+package main.chapter_1.section_5.exercise_7;
 
 abstract public class UnionFindNodeIndexed implements UnionFind {
 

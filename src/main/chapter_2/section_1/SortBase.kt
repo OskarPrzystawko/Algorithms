@@ -1,4 +1,4 @@
-package chapter_2.section_1
+package main.chapter_2.section_1
 
 open class SortBase {
 
