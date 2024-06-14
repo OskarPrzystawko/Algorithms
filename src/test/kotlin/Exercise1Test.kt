@@ -1,10 +1,10 @@
 package test
 
-import chapter_2.section_2_mergesort.merge
+import chapter_2.section_2_mergesort.Exercise1.merge
 import org.junit.jupiter.api.Assertions.assertArrayEquals
 import org.junit.jupiter.api.Test
 
-class MergeSortTest {
+class Exercise1Test {
 
     @Test
     fun `merge() merges 2 sorted halves of the array into 1 sorted array`() {
@@ -12,8 +12,7 @@ class MergeSortTest {
         val items = arrayOf('A', 'E', 'Q', 'S', 'U', 'Y', 'E', 'I', 'N', 'O', 'S', 'T')
 
         // WHEN
-        merge(
-            itemsToMerge = items,
+        items.merge(
             memory = Array(items.size, init = { null }),
             comparator = { a, b -> a.compareTo(b) },
             low = 0,
