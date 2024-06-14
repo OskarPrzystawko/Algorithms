@@ -89,5 +89,5 @@ object Exercise2 {
         println(items.contentToString())
     }
 
-    val MERGE_STRING_LENGTH = 48
+    const val MERGE_STRING_LENGTH = 48
 }
