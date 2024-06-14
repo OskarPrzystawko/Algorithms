@@ -1,6 +1,5 @@
-package test
+package chapter_2.section_2_mergesort
 
-import chapter_2.section_2_mergesort.Exercise2.topDownMergeSort
 import chapter_2.section_2_mergesort.Exercise3.bottomUpMergeSort
 import org.junit.jupiter.api.Assertions.assertArrayEquals
 import org.junit.jupiter.api.Test
