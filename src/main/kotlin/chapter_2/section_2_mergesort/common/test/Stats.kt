@@ -1,8 +1,8 @@
 package chapter_2.section_2_mergesort.common.test
 
 data class Stats(
-    val arrayAccesses: Int,
-    val comparisons: Int,
+    var arrayAccesses: Int,
+    var comparisons: Int,
 ) {
 
     operator fun plus(stats: Stats) = Stats(
