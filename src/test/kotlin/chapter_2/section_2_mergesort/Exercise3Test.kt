@@ -1,6 +1,6 @@
 package chapter_2.section_2_mergesort
 
-import chapter_2.section_2_mergesort.common.logs.bottomUpMergeSortWithLogs
+import chapter_2.section_2_mergesort.common.test.bottomUpMergeSortTest
 import org.junit.jupiter.api.Assertions.assertArrayEquals
 import org.junit.jupiter.api.Test
 import kotlin.math.floor
@@ -19,7 +19,7 @@ class Exercise3Test {
         }
         val maxDepth = floor(log2((items.size-1).toDouble())).toInt()
         var depth = maxDepth
-        items.bottomUpMergeSortWithLogs(
+        items.bottomUpMergeSortTest(
             comparator = { a, b -> a.compareTo(b) },
             onLengthChange = {
                 depth = maxDepth - log2(it.toDouble()).toInt()

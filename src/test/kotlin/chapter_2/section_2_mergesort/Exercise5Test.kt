@@ -1,7 +1,7 @@
 package chapter_2.section_2_mergesort
 
-import chapter_2.section_2_mergesort.common.logs.bottomUpMergeSortWithLogs
-import chapter_2.section_2_mergesort.common.logs.topDownMergeSortWithLogs
+import chapter_2.section_2_mergesort.common.test.bottomUpMergeSortTest
+import chapter_2.section_2_mergesort.common.test.topDownMergeSortTest
 import org.junit.jupiter.api.Assertions.assertArrayEquals
 import org.junit.jupiter.api.Test
 
@@ -16,7 +16,7 @@ class Exercise5Test {
         println("Subarray lengths in the merges")
         println("Top-down merge sort")
         //
-        items.topDownMergeSortWithLogs(
+        items.topDownMergeSortTest(
             comparator = { a, b -> a.compareTo(b) },
             afterMerge = { _, _, low, _, high, _ ->
                 print("${high-low+1}, ")
@@ -24,7 +24,7 @@ class Exercise5Test {
         )
         println()
         println("Bottom-up merge sort")
-        items.bottomUpMergeSortWithLogs(
+        items.bottomUpMergeSortTest(
             comparator = { a, b -> a.compareTo(b) },
             afterMerge = { _, _, low, _, high, _ ->
                 print("${high-low+1}, ")

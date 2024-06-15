@@ -1,6 +1,6 @@
 package chapter_2.section_2_mergesort
 
-import chapter_2.section_2_mergesort.common.logs.mergeWithLogs
+import chapter_2.section_2_mergesort.common.test.mergeTest
 import org.junit.jupiter.api.Assertions.assertArrayEquals
 import org.junit.jupiter.api.Test
 
@@ -12,7 +12,7 @@ class Exercise1Test {
         val items = arrayOf('A', 'E', 'Q', 'S', 'U', 'Y', 'E', 'I', 'N', 'O', 'S', 'T')
 
         // WHEN
-        items.mergeWithLogs(
+        items.mergeTest(
             memory = Array(items.size, init = { null }),
             comparator = { a, b -> a.compareTo(b) },
             low = 0,

@@ -1,13 +1,13 @@
-package chapter_2.section_2_mergesort.common.logs
+package chapter_2.section_2_mergesort.common.test
 
 
-inline fun <reified T> Array<T>.topDownMergeSortWithLogs(
+inline fun <reified T> Array<T>.topDownMergeSortTest(
     comparator: Comparator<T>,
     beforeMerge: MergeLog<T> = MergeLog { _, _, _, _, _, _-> },
     whileMerge: MergeLogInnerLoop<T> = MergeLogInnerLoop { _, _, _, _, _, _, _, _, _ -> },
     afterMerge: MergeLog<T> = MergeLog { _, _, _, _, _, _ -> },
-) {
-    mergeSortRecursive(
+): Stats {
+    return mergeSortRecursive(
         comparator = comparator,
         memory = arrayOfNulls(size),
         low = 0,
@@ -28,14 +28,14 @@ fun <T> Array<T>.mergeSortRecursive(
     beforeMerge: MergeLog<T> = MergeLog { _, _, _, _, _, _-> },
     whileMerge: MergeLogInnerLoop<T> = MergeLogInnerLoop { _, _, _, _, _, _, _, _, _ -> },
     afterMerge: MergeLog<T> = MergeLog { _, _, _, _, _, _-> },
-) {
+): Stats {
     if (low >= high) {
-        return
+        return Stats.EMPTY
     }
     val mid = (low + high) / 2
 
-    mergeSortRecursive(comparator, memory, low, mid, depth+1, beforeMerge, whileMerge, afterMerge)
-    mergeSortRecursive(comparator, memory, mid + 1, high, depth+1, beforeMerge, whileMerge, afterMerge)
-    mergeWithLogs(memory, comparator, low, mid, high, depth, beforeMerge, whileMerge, afterMerge)
+    return mergeSortRecursive(comparator, memory, low, mid, depth+1, beforeMerge, whileMerge, afterMerge) +
+            mergeSortRecursive(comparator, memory, mid + 1, high, depth+1, beforeMerge, whileMerge, afterMerge) +
+            mergeTest(memory, comparator, low, mid, high, depth, beforeMerge, whileMerge, afterMerge)
 }
 

@@ -1,6 +1,6 @@
 package chapter_2.section_2_mergesort
 
-import chapter_2.section_2_mergesort.common.logs.topDownMergeSortWithLogs
+import chapter_2.section_2_mergesort.common.test.topDownMergeSortTest
 import org.junit.jupiter.api.Assertions.assertArrayEquals
 import org.junit.jupiter.api.Test
 
@@ -15,7 +15,7 @@ class Exercise2Test {
         with(items.contentToString()) {
             println(padStart(length + MERGE_STRING_LENGTH))
         }
-        items.topDownMergeSortWithLogs(
+        items.topDownMergeSortTest(
             comparator = { a, b -> a.compareTo(b) },
             afterMerge = { _, _, low, mid, high, depth ->
                 val str = "merge(low = $low, mid = $mid, high = $high)"
